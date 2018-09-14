@@ -1,0 +1,32 @@
+{
+  "name": "@bappo/svg",
+  "description": "React SVG components for Bappo",
+  "version": "0.1.0",
+  "author": "Bappo",
+  "dependencies": {
+    "svgs": "^3.2.1"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.0.0",
+    "@babel/core": "^7.0.1",
+    "@babel/preset-env": "^7.0.0",
+    "prettier": "^1.14.2",
+    "rimraf": "^2.6.2"
+  },
+  "files": [
+    "lib"
+  ],
+  "keywords": [
+    "bappo"
+  ],
+  "license": "MIT",
+  "main": "lib/index.js",
+  "module": "src/index.js",
+  "peerDependencies": {
+    "react": "*"
+  },
+  "scripts": {
+    "build": "rimraf lib/ && BABEL_ENV=cjs babel src/ -d lib/",
+    "prepublish": "npm run build"
+  }
+}
